@@ -1,0 +1,78 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  :root {
+    --heading-height: 70px;
+    --nav-height: 30px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-y: auto;
+    user-select: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .centered {
+    text-align: center;
+  }
+  
+  .flex-container {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  #title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--heading-height);
+    background-color: #a3a3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #nav {
+    position: fixed;
+    top: var(--heading-height);
+    left: 0px;
+    right: 0px;
+    height: var(--nav-height);
+  }
+  
+  #nav > button {
+    background-color: #86a5ac;
+    flex: 1;
+    border: none;
+    animation: none;
+    transition: 0.3s;
+  }
+  
+  #nav > button:hover {
+    background-color: #9dc5cd;
+    transition: 0.1s;
+  }
+  
+  #content {
+    position: fixed;
+    top: calc(var(--nav-height) + var(--heading-height));
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #f0f9ff;
+    padding: 5px;
+  }
+  
+  #content > h2 {
+    padding: 10px;
+    text-align: center;
+  }
